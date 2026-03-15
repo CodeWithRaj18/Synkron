@@ -1,0 +1,6 @@
+tool_id,tool_name,tool_type,purpose
+T001,OpenAI API,LLM API,Natural language reasoning and generation
+T002,Pinecone,Vector Database,RAG and semantic search
+T003,PostgreSQL,Database,Structured relational data storage
+T004,Google Search API,Search Engine,External information retrieval
+T005,LangChain,AI Framework,Agent orchestration and tool integration
