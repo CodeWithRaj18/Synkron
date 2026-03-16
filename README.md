@@ -152,39 +152,38 @@ Rental Yield Estimate: 4.5%
 
 ---
 
-## Tech Stack
+Tech Stack
+Backend
 
-### Backend
+FastAPI
 
-* FastAPI
-* Python
+Python
 
-### AI Models
+AI Models
 
-* Gemini API
-* HuggingFace models
+The system supports both cloud and local LLM inference.
 
-### Document Processing
+Cloud Models
 
-* PDF parsing libraries
-* LLM-based extraction
+Gemini API
 
-### Frontend
+Local Models (via Ollama)
 
-* React
-* Modern UI dashboards
+DeepSeek 6.7B
 
-### Architecture
+Phi-3 Mini
 
-* Stateless processing
-* API-first design
+Other HuggingFace-compatible models
 
----
+Using Ollama, the platform runs LLM models locally, providing:
 
-## API Endpoints
+Faster response time
 
-### Upload document
+Lower cost (no API calls)
 
+Better privacy for sensitive documents
+
+Offline inference capability
 ```
 POST /upload-pdf
 ```
@@ -273,4 +272,20 @@ Steps:
 
 ---
 
+Example Workflow
+Step 1 — User uploads company document
+Company: XYZ Software
+Employees: Manager, Backend, Frontend
+Project: SaaS platform
+Step 2 — AI extracts structured data
+{
+  "company": "XYZ Software",
+  "modules": ["Auth", "Payments", "Dashboard"]
+}
+Step 3 — Pipelines generate outputs
 
+Developer task assignments
+
+Investment reports
+
+Property evaluations
